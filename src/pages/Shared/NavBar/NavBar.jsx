@@ -3,7 +3,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { TfiCar } from "react-icons/tfi";
 
 const NavBar = () => {
-  const user = true;
+  const user = false;
 
   return (
     <nav className="bg-black px-2 py-5">
