@@ -1,9 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { TfiCar } from "react-icons/tfi";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavBar = () => {
-  const user = false;
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
 
   return (
     <nav className="bg-black px-2 py-5">
@@ -56,7 +64,7 @@ const NavBar = () => {
             >
               {user.photoURL ? (
                 <img
-                  className="w-10 md:w-14 rounded-full"
+                  className="w-8 md:w-12 rounded-full"
                   src={user.photoURL}
                   alt="user photo"
                 />
@@ -64,7 +72,9 @@ const NavBar = () => {
                 <FaUserCircle className="text-3xl md:text-4xl" />
               )}
             </div>
-            <button className="btn-primary">Logout</button>
+            <button onClick={handleLogOut} className="btn-primary">
+              Logout
+            </button>
           </div>
         ) : (
           <Link to="/login" className="btn-primary">
