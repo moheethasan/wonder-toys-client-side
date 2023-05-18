@@ -8,10 +8,11 @@ const NavBar = () => {
   return (
     <nav className="bg-black px-2 py-5">
       <div className="flex justify-between items-center">
-        <h2 className="flex items-center gap-1 title-text text-lg md:text-2xl font-bold">
-          WonderToys <TfiCar className="text-violet-500 text-lg md:text-2xl" />
+        <h2 className="flex items-center gap-1 title-text text-base md:text-2xl font-bold">
+          WonderToys{" "}
+          <TfiCar className="text-violet-500 text-base md:text-2xl" />
         </h2>
-        <div className="text-base md:text-lg flex gap-3 md:gap-5">
+        <div className="flex gap-1 md:gap-5">
           <NavLink
             className={({ isActive }) => (isActive ? "active" : "default")}
             to="/"
@@ -60,7 +61,7 @@ const NavBar = () => {
                   alt="user photo"
                 />
               ) : (
-                <FaUserCircle className="text-4xl" />
+                <FaUserCircle className="text-3xl md:text-4xl" />
               )}
             </div>
             <button className="btn-primary">Logout</button>

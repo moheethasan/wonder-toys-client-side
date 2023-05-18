@@ -11,11 +11,11 @@
 }
 
 .active {
-  @apply font-medium tracking-wide bg-gradient-to-r from-blue-500 to-violet-600 bg-clip-text text-transparent text-sm md:text-base;
+  @apply font-medium tracking-wide bg-gradient-to-r from-blue-500 to-violet-600 bg-clip-text text-transparent text-xs md:text-base;
 }
 
 .default {
-  @apply font-medium tracking-wide text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-600 bg-clip-text hover:text-transparent text-sm md:text-base;
+  @apply font-medium tracking-wide text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-violet-600 bg-clip-text hover:text-transparent text-xs md:text-base;
 }
 
 .title-text {
