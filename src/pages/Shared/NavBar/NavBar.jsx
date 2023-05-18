@@ -3,7 +3,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { TfiCar } from "react-icons/tfi";
 
 const NavBar = () => {
-  const user = false;
+  const user = true;
 
   return (
     <nav className="bg-black px-2 py-5">
@@ -18,6 +18,28 @@ const NavBar = () => {
           >
             Home
           </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "default")}
+            to="/blog"
+          >
+            All Toys
+          </NavLink>
+          {user && (
+            <>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "default")}
+                to="/blog"
+              >
+                My Toys
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "default")}
+                to="/blog"
+              >
+                Add A Toy
+              </NavLink>
+            </>
+          )}
           <NavLink
             className={({ isActive }) => (isActive ? "active" : "default")}
             to="/blog"
