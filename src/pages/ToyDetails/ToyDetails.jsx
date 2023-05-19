@@ -22,8 +22,8 @@ const ToyDetails = () => {
       </h1>
       <div className="bg-black container mx-auto flex flex-col-reverse lg:flex-row justify-center items-center gap-10 md:gap-20 px-4 md:px-8 lg:px-20 py-14 md:py-20 lg:py-28 rounded-lg">
         <div>
-          <h2 className="text-4xl md:text-5xl font-semibold mb-8 title-text">
-            {name}
+          <h2 className="text-4xl md:text-5xl font-semibold mb-8">
+            <span className="title-text">{name}</span>
           </h2>
           <p className="text-lg mb-6 text-slate-300">{detail_description}</p>
           <div className="flex justify-between items-center mb-1">

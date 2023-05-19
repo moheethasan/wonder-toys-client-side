@@ -59,6 +59,7 @@ const Register = () => {
               type="text"
               name="name"
               placeholder="Enter your name"
+              required
               className="input input-bordered border-2"
             />
           </div>

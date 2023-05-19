@@ -14,8 +14,8 @@ import img12 from "../../../assets/img12.avif";
 const Gallery = () => {
   return (
     <div className="container mx-auto px-2 py-6 md:py-12">
-      <h1 className="text-center text-4xl md:text-5xl font-bold title-text pb-3">
-        Products Gallery
+      <h1 className="text-center text-4xl md:text-5xl font-bold pb-3">
+        <span className="title-text">Products Gallery</span>
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-10 my-10 md:my-20">
         <div className="shadow-lg hover:shadow-2xl">
