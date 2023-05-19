@@ -7,7 +7,7 @@
 }
 
 .btn-outlined {
-  @apply font-medium px-4 py-2 md:px-6 rounded-lg text-black bg-white hover:text-white hover:bg-gradient-to-r hover:border-white from-blue-600 to-violet-700;
+  @apply font-medium px-4 py-2 md:px-6 rounded-lg border text-violet-600 border-violet-600 bg-white hover:text-white hover:bg-gradient-to-r hover:border-white from-blue-500 to-violet-600;
 }
 
 .active {
