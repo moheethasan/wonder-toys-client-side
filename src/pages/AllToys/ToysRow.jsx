@@ -12,9 +12,9 @@ const ToysRow = ({ product, index }) => {
       <td className="font-medium">{price}$</td>
       <td className="font-medium text-center">{available_quantity}</td>
       <td>
-        <button className="btn-outlined">
-          <Link to={`/allToys/${_id}`}>View Details</Link>
-        </button>
+        <Link to={`/allToys/${_id}`}>
+          <button className="btn-outlined">View Details</button>
+        </Link>
       </td>
     </tr>
   );
