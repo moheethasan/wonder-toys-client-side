@@ -3,7 +3,7 @@ import banner from "../../../assets/banner.jpg";
 
 const Banner = () => {
   return (
-    <header className="relative mb-5 md:mb-20">
+    <header className="relative mb-20">
       <img className="w-full" src={banner} alt="banner" />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-2 md:mb-5 font-black text-white">
