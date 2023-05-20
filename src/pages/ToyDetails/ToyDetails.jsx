@@ -13,7 +13,7 @@ const ToyDetails = () => {
     picture,
     detail_description,
     rating,
-  } = toy;
+  } = toy || {};
 
   return (
     <div className="px-2 py-20">

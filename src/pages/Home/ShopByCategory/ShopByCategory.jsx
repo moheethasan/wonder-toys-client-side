@@ -1,9 +1,69 @@
+import { useEffect, useState } from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import ToyCategory from "./ToyCategory";
+
 const ShopByCategory = () => {
+  const [toys, setToys] = useState([]);
+  const [activeTab, setActiveTab] = useState("Monster Truck");
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/toysCategory/${activeTab}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setToys(data);
+      });
+  }, [activeTab]);
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
+
   return (
-    <div className="container mx-auto px-2 pb-6 md:pb-12">
+    <div className="container mx-auto px-4 pb-6 md:pb-12">
       <h1 className="text-center text-4xl md:text-5xl font-bold pb-3">
         <span className="title-text">Shop By Category</span>
       </h1>
+      <Tabs className="my-20 font-semibold">
+        <TabList>
+          <Tab onClick={() => handleTabClick("Monster Truck")}>
+            Monster Truck
+          </Tab>
+          <Tab onClick={() => handleTabClick("Regular Car")}>Regular Car</Tab>
+          <Tab onClick={() => handleTabClick("Ambulance Car")}>
+            Ambulance Car
+          </Tab>
+          <Tab onClick={() => handleTabClick("Police Car")}>Police Car</Tab>
+        </TabList>
+        <TabPanel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+            {toys?.map((toy) => (
+              <ToyCategory key={toy._id} toy={toy} />
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+            {toys?.map((toy) => (
+              <ToyCategory key={toy._id} toy={toy} />
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+            {toys?.map((toy) => (
+              <ToyCategory key={toy._id} toy={toy} />
+            ))}
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+            {toys?.map((toy) => (
+              <ToyCategory key={toy._id} toy={toy} />
+            ))}
+          </div>
+        </TabPanel>
+      </Tabs>
     </div>
   );
 };

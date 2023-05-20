@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ToysRow = ({ product, index }) => {
   const { _id, available_quantity, name, price, seller_name, sub_category } =
-    product;
+    product || {};
   return (
     <tr>
       <td className="font-medium">{index + 1}</td>
