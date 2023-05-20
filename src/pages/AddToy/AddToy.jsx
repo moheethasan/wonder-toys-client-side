@@ -1,8 +1,29 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../../providers/AuthProvider";
+import swal from "sweetalert";
 
 const AddToy = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { user } = useContext(AuthContext);
+
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    fetch("http://localhost:5000/addToy", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          swal("Done!", "Toy added successfully!", "success");
+          reset();
+        }
+      });
+  };
 
   return (
     <div className="container mx-auto px-2 py-20">
@@ -32,8 +53,9 @@ const AddToy = () => {
             </label>
             <input
               {...register("price")}
-              type="number"
-              placeholder="Price"
+              type="text"
+              pattern="^\d+(\.\d{1,2})?$"
+              placeholder="0.00"
               required
               className="input input-bordered border-2"
             />
@@ -60,8 +82,9 @@ const AddToy = () => {
             </label>
             <input
               {...register("rating")}
-              type="number"
-              placeholder="Rating"
+              type="text"
+              pattern="^(?:[0-4](?:\.\d)?|5(?:\.0)?)$"
+              placeholder="0.0"
               required
               className="input input-bordered border-2"
             />
@@ -88,8 +111,9 @@ const AddToy = () => {
             </label>
             <input
               {...register("available_quantity")}
-              type="number"
-              placeholder="Quantity"
+              type="text"
+              pattern="^\d+$"
+              placeholder="0"
               required
               className="input input-bordered border-2"
             />
@@ -104,7 +128,8 @@ const AddToy = () => {
               {...register("seller_name")}
               type="text"
               placeholder="Seller name"
-              required
+              defaultValue={user?.displayName}
+              readOnly
               className="input input-bordered border-2"
             />
           </div>
@@ -116,7 +141,8 @@ const AddToy = () => {
               {...register("seller_email")}
               type="email"
               placeholder="Seller Email"
-              required
+              defaultValue={user?.email}
+              readOnly
               className="input input-bordered border-2"
             />
           </div>
@@ -134,7 +160,11 @@ const AddToy = () => {
             className="resize-none rounded-xl border-gray-300 border-2 px-4 py-2"
           />
         </div>
-        <input className="btn-primary btn-block mt-6" type="submit" />
+        <input
+          className="btn-primary btn-block mt-6"
+          type="submit"
+          value="Add Toy"
+        />
       </form>
     </div>
   );
