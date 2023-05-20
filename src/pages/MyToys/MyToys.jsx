@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import MyToysRow from "./MyToysRow";
+import swal from "sweetalert";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
@@ -15,6 +16,34 @@ const MyToys = () => {
         setMyToys(data);
       });
   }, []);
+
+  const handleDelete = (_id) => {
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this imaginary file!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        fetch(`http://localhost:5000/deleteToy/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              swal("Poof! Your toy data has been deleted!", {
+                icon: "success",
+              });
+              const remaining = myToys.filter((toy) => toy._id != _id);
+              setMyToys(remaining);
+            }
+          });
+      } else {
+        swal("Don't worry your toys are safe!");
+      }
+    });
+  };
 
   return (
     <div className="container mx-auto overflow-x-auto py-20">
@@ -37,7 +66,12 @@ const MyToys = () => {
         </thead>
         <tbody>
           {myToys?.map((toys, index) => (
-            <MyToysRow key={toys._id} toys={toys} index={index}></MyToysRow>
+            <MyToysRow
+              key={toys._id}
+              toys={toys}
+              index={index}
+              handleDelete={handleDelete}
+            ></MyToysRow>
           ))}
         </tbody>
       </table>

@@ -1,7 +1,7 @@
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const MyToysRow = ({ toys, index }) => {
+const MyToysRow = ({ toys, index, handleDelete }) => {
   const {
     _id,
     available_quantity,
@@ -30,7 +30,7 @@ const MyToysRow = ({ toys, index }) => {
           <Link to={`/updateToy/${_id}`}>
             <FaEdit className="text-2xl text-violet-600" />
           </Link>
-          <button>
+          <button onClick={() => handleDelete(_id)}>
             <FaTrash className="text-xl text-violet-600" />
           </button>
         </div>
