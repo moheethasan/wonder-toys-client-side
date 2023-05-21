@@ -13,46 +13,49 @@ import img12 from "../../../assets/img12.avif";
 
 const Gallery = () => {
   return (
-    <div className="container mx-auto px-4 py-6 md:py-12">
-      <h1 className="text-center text-4xl md:text-5xl font-bold pb-3">
+    <div className="container mx-auto px-4 py-6 md:py-12 overflow-hidden">
+      <h1
+        className="text-center text-4xl md:text-5xl font-bold pb-3"
+        data-aos="fade-up"
+      >
         <span className="title-text">Products Gallery</span>
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-10 md:my-20">
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img1} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-right">
+          <img className="w-full rounded-lg" src={img1} alt="car" />
         </div>
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img5} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-up">
+          <img className="w-full rounded-lg" src={img5} alt="car" />
         </div>
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img11} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-left">
+          <img className="w-full rounded-lg" src={img11} alt="car" />
         </div>
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img2} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-right">
+          <img className="w-full rounded-lg" src={img2} alt="car" />
         </div>
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img3} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-down">
+          <img className="w-full rounded-lg" src={img3} alt="car" />
         </div>
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img7} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-left">
+          <img className="w-full rounded-lg" src={img7} alt="car" />
         </div>
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img8} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-right">
+          <img className="w-full rounded-lg" src={img8} alt="car" />
         </div>
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img9} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-down">
+          <img className="w-full rounded-lg" src={img9} alt="car" />
         </div>
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img10} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-left">
+          <img className="w-full rounded-lg" src={img10} alt="car" />
         </div>
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img4} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-right">
+          <img className="w-full rounded-lg" src={img4} alt="car" />
         </div>
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img12} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-up">
+          <img className="w-full rounded-lg" src={img12} alt="car" />
         </div>
-        <div className="shadow-lg hover:shadow-2xl">
-          <img className="w-full" src={img6} alt="car" />
+        <div className="shadow-lg hover:shadow-2xl" data-aos="fade-left">
+          <img className="w-full rounded-lg" src={img6} alt="car" />
         </div>
       </div>
     </div>

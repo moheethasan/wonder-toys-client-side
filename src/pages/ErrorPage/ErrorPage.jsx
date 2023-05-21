@@ -7,7 +7,7 @@ const ErrorPage = () => {
     <div className="flex items-center h-screen p-16">
       <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
         <img
-          className="w-2/5 mask mask-"
+          className="w-2/5 rounded-lg"
           src="https://i.gifer.com/origin/3e/3e739108dbd56c80f211c0b6f9af6081_w200.webp"
           alt="error image"
         />

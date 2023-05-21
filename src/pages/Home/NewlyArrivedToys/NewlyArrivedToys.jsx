@@ -2,12 +2,18 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const NewlyArrivedToys = () => {
   return (
-    <div className="container mx-auto px-4">
-      <h1 className="text-center text-4xl md:text-5xl font-bold pb-3">
+    <div className="container mx-auto px-4 overflow-hidden">
+      <h1
+        className="text-center text-4xl md:text-5xl font-bold pb-3"
+        data-aos="fade-up"
+      >
         <span className="title-text">Newly Arrived</span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 py-20">
-        <div className="card card-compact bg-base-100 shadow-xl flex flex-col">
+        <div
+          className="card card-compact bg-base-100 shadow-xl flex flex-col"
+          data-aos="fade-right"
+        >
           <figure>
             <img
               className="w-full"
@@ -34,7 +40,10 @@ const NewlyArrivedToys = () => {
             </div>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 shadow-xl flex flex-col">
+        <div
+          className="card card-compact bg-base-100 shadow-xl flex flex-col"
+          data-aos="fade-up"
+        >
           <figure>
             <img
               className="w-full"
@@ -61,7 +70,10 @@ const NewlyArrivedToys = () => {
             </div>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 shadow-xl flex flex-col">
+        <div
+          className="card card-compact bg-base-100 shadow-xl flex flex-col"
+          data-aos="fade-left"
+        >
           <figure>
             <img
               className="w-full"
@@ -88,7 +100,10 @@ const NewlyArrivedToys = () => {
             </div>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 shadow-xl flex flex-col">
+        <div
+          className="card card-compact bg-base-100 shadow-xl flex flex-col"
+          data-aos="fade-right"
+        >
           <figure>
             <img
               className="w-full"
@@ -116,7 +131,10 @@ const NewlyArrivedToys = () => {
             </div>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 shadow-xl flex flex-col">
+        <div
+          className="card card-compact bg-base-100 shadow-xl flex flex-col"
+          data-aos="fade-up"
+        >
           <figure>
             <img
               className="w-full"
@@ -144,7 +162,10 @@ const NewlyArrivedToys = () => {
             </div>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 shadow-xl flex flex-col">
+        <div
+          className="card card-compact bg-base-100 shadow-xl flex flex-col"
+          data-aos="fade-left"
+        >
           <figure>
             <img
               className="w-full"

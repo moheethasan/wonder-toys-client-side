@@ -21,11 +21,14 @@ const ShopByCategory = () => {
 
   return (
     <div className="container mx-auto px-4 pb-6 md:pb-12">
-      <h1 className="text-center text-4xl md:text-5xl font-bold pb-3">
+      <h1
+        className="text-center text-4xl md:text-5xl font-bold pb-3"
+        data-aos="fade-up"
+      >
         <span className="title-text">Shop By Category</span>
       </h1>
       <Tabs className="my-20 font-semibold">
-        <TabList>
+        <TabList data-aos="fade-up">
           <Tab onClick={() => handleTabClick("Monster Truck")}>
             Monster Truck
           </Tab>
@@ -36,28 +39,40 @@ const ShopByCategory = () => {
           <Tab onClick={() => handleTabClick("Police Car")}>Police Car</Tab>
         </TabList>
         <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10"
+            data-aos="fade-up"
+          >
             {toys?.map((toy) => (
               <ToyCategory key={toy._id} toy={toy} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10"
+            data-aos="fade-up"
+          >
             {toys?.map((toy) => (
               <ToyCategory key={toy._id} toy={toy} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10"
+            data-aos="fade-up"
+          >
             {toys?.map((toy) => (
               <ToyCategory key={toy._id} toy={toy} />
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-10"
+            data-aos="fade-up"
+          >
             {toys?.map((toy) => (
               <ToyCategory key={toy._id} toy={toy} />
             ))}
