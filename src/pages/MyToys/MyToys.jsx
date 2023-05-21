@@ -13,7 +13,7 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myToys?email=${user.email}`)
+    fetch(`https://wonder-toys-server.vercel.app/myToys?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyToys(data);
@@ -29,7 +29,7 @@ const MyToys = () => {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        fetch(`http://localhost:5000/deleteToy/${_id}`, {
+        fetch(`https://wonder-toys-server.vercel.app/deleteToy/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -49,7 +49,7 @@ const MyToys = () => {
   };
 
   const handleDefault = () => {
-    fetch(`http://localhost:5000/myToys?email=${user.email}`)
+    fetch(`https://wonder-toys-server.vercel.app/myToys?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyToys(data);
@@ -57,7 +57,7 @@ const MyToys = () => {
   };
 
   const handleAscending = () => {
-    fetch(`http://localhost:5000/ascending?email=${user.email}`)
+    fetch(`https://wonder-toys-server.vercel.app/ascending?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyToys(data);
@@ -65,7 +65,9 @@ const MyToys = () => {
   };
 
   const handleDescending = () => {
-    fetch(`http://localhost:5000/descending?email=${user.email}`)
+    fetch(
+      `https://wonder-toys-server.vercel.app/descending?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setMyToys(data);

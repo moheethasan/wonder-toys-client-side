@@ -8,7 +8,7 @@ const ShopByCategory = () => {
   const [activeTab, setActiveTab] = useState("Monster Truck");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toysCategory/${activeTab}`)
+    fetch(`https://wonder-toys-server.vercel.app/toysCategory/${activeTab}`)
       .then((res) => res.json())
       .then((data) => {
         setToys(data);

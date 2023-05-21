@@ -12,7 +12,7 @@ const UpdateToy = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    fetch(`http://localhost:5000/updateToy/${_id}`, {
+    fetch(`https://wonder-toys-server.vercel.app/updateToy/${_id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

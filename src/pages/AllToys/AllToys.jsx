@@ -6,7 +6,7 @@ const AllToys = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allToys")
+    fetch("https://wonder-toys-server.vercel.app/allToys")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -17,7 +17,7 @@ const AllToys = () => {
     const form = event.target;
     const name = form.toy_name.value;
 
-    fetch(`http://localhost:5000/searchToyByName/${name}`)
+    fetch(`https://wonder-toys-server.vercel.app/searchToyByName/${name}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

@@ -9,7 +9,7 @@ const AddToy = () => {
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addToy", {
+    fetch("https://wonder-toys-server.vercel.app/addToy", {
       method: "POST",
       headers: {
         "content-type": "application/json",

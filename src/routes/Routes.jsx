@@ -34,7 +34,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allToys/${params.id}`),
+          fetch(`https://wonder-toys-server.vercel.app/allToys/${params.id}`),
       },
       {
         path: "addToy",
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
         path: "updateToy/:id",
         element: <UpdateToy></UpdateToy>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/allToys/${params.id}`),
+          fetch(`https://wonder-toys-server.vercel.app/allToys/${params.id}`),
       },
       {
         path: "myToys",
