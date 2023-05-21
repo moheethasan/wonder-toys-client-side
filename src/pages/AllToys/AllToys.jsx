@@ -15,6 +15,7 @@ const AllToys = () => {
       <h1 className="text-center text-4xl md:text-5xl font-bold pb-16">
         <span className="title-text">All Toys</span>
       </h1>
+
       <table className="table table-zebra w-full">
         <thead>
           <tr>

@@ -7,7 +7,7 @@ const ToyCategory = ({ toy }) => {
   return (
     <div className="card card-compact bg-base-100 shadow-xl flex flex-col">
       <figure>
-        <img className="w-full h-80 md:h-64 xl:h-80" src={picture} alt="car" />
+        <img className="w-full h-80 md:h-64 lg:h-80" src={picture} alt="car" />
       </figure>
       <div className="card-body">
         <h2 className="text-xl font-bold mb-3">
@@ -22,7 +22,7 @@ const ToyCategory = ({ toy }) => {
             <span className="title-text">{available_quantity}</span>
           </p>
         </div>
-        <div className="flex justify-between items-center mt-auto">
+        <div className="flex  justify-between items-center mt-auto">
           <div className="flex justify-between items-center">
             <span className="flex items-center text-base font-semibold">
               <Rating style={{ maxWidth: 130 }} value={rating} readOnly />{" "}
