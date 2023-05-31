@@ -13,7 +13,7 @@ import img12 from "../../../assets/img12.avif";
 
 const Gallery = () => {
   return (
-    <div className="container mx-auto px-4 py-6 md:py-12 overflow-hidden">
+    <div className="container mx-auto px-4 pt-0 pb-6 md:py-12 overflow-hidden">
       <h1
         className="text-center text-4xl md:text-5xl font-bold pb-3"
         data-aos="fade-up"

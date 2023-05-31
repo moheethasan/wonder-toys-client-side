@@ -7,7 +7,7 @@ import {
 
 const Services = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="container mx-auto px-4 py-6 md:py-16">
       <h1 className="text-center text-4xl md:text-5xl font-bold pb-3 mt-12">
         <span className="title-text">Our Services</span>
       </h1>

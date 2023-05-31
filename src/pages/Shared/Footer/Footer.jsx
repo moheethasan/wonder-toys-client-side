@@ -4,7 +4,7 @@ import { FaPaperPlane } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-black mt-20 pt-20 pb-10 px-2 text-gray-600">
+    <footer className="bg-black mt-20 pt-20 pb-10 px-4 text-gray-600">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-20">
         <div>
           <h2 className="flex items-center gap-1 text-lg md:text-2xl font-bold mb-3">

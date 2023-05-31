@@ -21,8 +21,8 @@ const ToyDetails = () => {
       <Helmet>
         <title>Wonder Toys | Toy Details</title>
       </Helmet>
-      <div className="px-2 py-20">
-        <h1 className="text-center text-4xl md:text-5xl font-bold pb-16">
+      <div className="px-2 py-6">
+        <h1 className="text-center text-4xl md:text-5xl font-bold py-14">
           <span className="title-text">Toy Details</span>
         </h1>
         <div className="bg-black container mx-auto flex flex-col-reverse lg:flex-row justify-center items-center gap-10 md:gap-20 px-4 md:px-8 lg:px-20 py-14 md:py-20 lg:py-28 rounded-lg">
