@@ -51,6 +51,7 @@ const AllToys = () => {
           <thead>
             <tr>
               <th className="text-base">No.</th>
+              <th className="text-base">Picture</th>
               <th className="text-base">Toy Name</th>
               <th className="text-base">Seller</th>
               <th className="text-base">Sub-category</th>

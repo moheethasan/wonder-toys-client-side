@@ -12,6 +12,8 @@ const UpdateToy = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
+    data.price = parseFloat(data.price);
+    data.available_quantity = parseInt(data.available_quantity);
     fetch(`https://wonder-toys-server.vercel.app/updateToy/${_id}`, {
       method: "PATCH",
       headers: {

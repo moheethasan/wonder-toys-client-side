@@ -17,7 +17,7 @@ const NewlyArrivedToys = () => {
           <figure>
             <img
               className="w-full"
-              src="https://cdn10.bigcommerce.com/s-4df9uz5/products/33083/images/185112/S1808301-1__83293.1684532284.320.200.jpg?c=2"
+              src="https://i.ibb.co/RT1rBxj/71am-Uav1rs-S-AC-UL400.jpg"
               alt="car"
             />
           </figure>
@@ -47,7 +47,7 @@ const NewlyArrivedToys = () => {
           <figure>
             <img
               className="w-full"
-              src="https://cdn10.bigcommerce.com/s-4df9uz5/products/33082/images/185107/S1807505-1__71641.1684531742.320.200.jpg?c=2"
+              src="https://i.ibb.co/y55fWhf/61k-Foe-Kr-Qv-L-AC-UL400.jpg"
               alt="car"
             />
           </figure>
@@ -77,7 +77,7 @@ const NewlyArrivedToys = () => {
           <figure>
             <img
               className="w-full"
-              src="https://cdn10.bigcommerce.com/s-4df9uz5/products/33079/images/185092/S1807203-1__60717.1684531683.320.200.jpg?c=2"
+              src="https://i.ibb.co/L5c9Xp5/715-Qwg4c-GZL-AC-UL400.jpg"
               alt="car"
             />
           </figure>
@@ -107,7 +107,7 @@ const NewlyArrivedToys = () => {
           <figure>
             <img
               className="w-full"
-              src="https://cdn10.bigcommerce.com/s-4df9uz5/products/33074/images/185067/S1805807-1__67220.1684530042.320.200.jpg?c=2"
+              src="https://i.ibb.co/cbpX531/71-JR8w0-Ty-L-AC-UL400.jpg"
               alt="car"
             />
           </figure>
@@ -138,7 +138,7 @@ const NewlyArrivedToys = () => {
           <figure>
             <img
               className="w-full"
-              src="https://cdn10.bigcommerce.com/s-4df9uz5/products/33067/images/185026/S1801519-1__66462.1684528935.320.200.jpg?c=2"
+              src="https://i.ibb.co/ky1DGYv/71-Huw-Jrn-M1-L-AC-UL400.jpg"
               alt="car"
             />
           </figure>
@@ -169,7 +169,7 @@ const NewlyArrivedToys = () => {
           <figure>
             <img
               className="w-full"
-              src="https://cdn10.bigcommerce.com/s-4df9uz5/products/33070/images/185046/S1802908-1__80773.1684529416.320.200.jpg?c=2"
+              src="https://i.ibb.co/mNpL1kY/81-I2-Bpsrpm-L-AC-UL400.jpg"
               alt="car"
             />
           </figure>

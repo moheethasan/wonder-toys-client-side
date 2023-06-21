@@ -17,7 +17,7 @@ const MyToysRow = ({ toys, index, handleDelete }) => {
     <tr>
       <td className="font-medium">{index + 1}</td>
       <td>
-        <img className="w-16" src={picture} alt="car" />
+        <img className="w-16 rounded-md" src={picture} alt="car" />
       </td>
       <td className="font-medium">{name}</td>
       <td className="font-medium">{sub_category}</td>

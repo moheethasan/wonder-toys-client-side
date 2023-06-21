@@ -9,6 +9,9 @@ const AddToy = () => {
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
+    data.price = parseFloat(data.price);
+    data.rating = parseFloat(data.rating);
+    data.available_quantity = parseInt(data.available_quantity);
     fetch("https://wonder-toys-server.vercel.app/addToy", {
       method: "POST",
       headers: {

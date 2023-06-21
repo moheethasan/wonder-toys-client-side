@@ -18,7 +18,7 @@ const MyToys = () => {
       .then((data) => {
         setMyToys(data);
       });
-  }, []);
+  }, [user]);
 
   const handleDelete = (_id) => {
     swal({
